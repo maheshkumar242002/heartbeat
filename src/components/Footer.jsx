@@ -7,26 +7,77 @@ export default function Footer() {
       <div className="container footer-container">
         <div className="footer-brand-col">
           <div className="footer-logo">
-            <svg viewBox="0 0 100 100" className="footer-logo-svg" width="28" height="28">
-              <path 
-                d="M12 35 C 12 15, 45 10, 50 35 C 55 10, 88 15, 88 35 C 88 60, 60 80, 50 88 C 40 80, 12 60, 12 35 Z" 
-                fill="none" 
-                stroke="#ef4444" 
-                strokeWidth="6"
-              />
-              <path 
-                d="M20 50 L 38 50 L 44 32 L 50 68 L 56 42 L 62 50 L 80 50" 
-                fill="none" 
-                stroke="#3b82f6" 
-                strokeWidth="6"
-              />
+            <svg viewBox="0 0 200 200" className="footer-logo-svg" width="32" height="32">
+              <defs>
+                <linearGradient id="footer-logo-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#1d4ed8" />
+                </linearGradient>
+                <linearGradient id="footer-logo-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#10b981" />
+                  <stop offset="100%" stopColor="#84cc16" />
+                </linearGradient>
+                <linearGradient id="footer-logo-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#10b981" />
+                  <stop offset="100%" stopColor="#06b6d4" />
+                </linearGradient>
+                <linearGradient id="footer-logo-cross" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+                <linearGradient id="footer-logo-circle" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+                <path id="footer-text-path" d="M 32,82 A 72,72 0 0,1 168,82" fill="none" />
+              </defs>
+
+              {/* Outer Double Ring Arcs (Top) */}
+              <path d="M 25,75 A 80,80 0 0,1 175,75" fill="none" stroke="url(#footer-logo-circle)" strokeWidth="3" strokeLinecap="round" />
+              <path d="M 36,77 A 68,68 0 0,1 164,77" fill="none" stroke="url(#footer-logo-circle)" strokeWidth="1.5" strokeLinecap="round" />
+
+              {/* Outer Double Ring Arcs (Bottom) */}
+              <path d="M 25,125 A 80,80 0 0,0 155,135" fill="none" stroke="url(#footer-logo-circle)" strokeWidth="3" strokeLinecap="round" />
+              <path d="M 36,123 A 68,68 0 0,0 148,128" fill="none" stroke="url(#footer-logo-circle)" strokeWidth="1.5" strokeLinecap="round" />
+
+              {/* Curved Text */}
+              <text>
+                <textPath href="#footer-text-path" startOffset="50%" textAnchor="middle" fill="var(--text-primary)" fontSize="13" fontFamily="var(--font-heading)" fontWeight="800" letterSpacing="1.2">
+                  CARE IN EVERY BEAT
+                </textPath>
+              </text>
+
+              {/* ECG Wave on Left */}
+              <path d="M 5,115 L 23,115 L 28,103 L 32,115 L 35,118 L 39,80 L 43,145 L 48,105 L 53,115 L 65,115" 
+                    fill="none" stroke="url(#footer-logo-teal)" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+
+              {/* Medical Cross on Right */}
+              <path d="M 155,115 L 185,115 M 170,100 L 170,130" 
+                    fill="none" stroke="url(#footer-logo-cross)" strokeWidth="10" strokeLinecap="round" />
+
+              {/* Heart Left Side */}
+              <path d="M 100,160 C 65,138 48,110 48,90 C 48,70 65,58 82,75 C 91,84 100,95 100,102" 
+                    fill="none" stroke="url(#footer-logo-blue)" strokeWidth="12" strokeLinecap="round" />
+
+              {/* Heart Right Side (Green Leaf) */}
+              <path d="M 100,160 C 105,145 142,130 142,100 C 142,80 132,70 122,80 C 112,90 102,99 100,102 Z" 
+                    fill="url(#footer-logo-green)" />
+                    
+              {/* Leaf Center Vein */}
+              <path d="M 102,150 C 112,132 122,118 132,95" 
+                    fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" opacity="0.75" />
+
+              {/* Letters "HB" */}
+              <text x="94" y="125" fontFamily="var(--font-heading)" fontWeight="900" fontSize="36" fill="var(--text-primary)" textAnchor="middle" letterSpacing="-1.5">
+                HB
+              </text>
             </svg>
             <span className="logo-text">
-              HEARTBEAT<span className="logo-subtext">DISTRIBUTION</span>
+              HEARTBEAT<span className="logo-subtext">PHARMA</span>
             </span>
           </div>
           <p className="brand-desc">
-            Seamless GDP-compliant pharmaceutical logistics and B2B wholesale supply networks delivering life-critical formulations globally.
+            Pioneering high-integrity pharmaceutical development and secure wholesale supply chains delivering life-critical therapeutics globally.
           </p>
           <div className="social-links">
             <a href="#" className="social-icon" aria-label="LinkedIn">
@@ -72,18 +123,18 @@ export default function Footer() {
         <div className="footer-links-col">
           <h4>Compliance</h4>
           <ul>
-            <li><a href="#">GDP Certification</a></li>
+            <li><a href="#">GMP & GDP Certification</a></li>
             <li><a href="#">B2B Partner Registration</a></li>
             <li><a href="#">Quality Standards</a></li>
-            <li><a href="#">Distribution Policy</a></li>
+            <li><a href="#">Pharma Supply Policy</a></li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom container">
-        <p>&copy; {new Date().getFullYear()} Heartbeat Distributors Co. All logistics and distribution rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Heartbeat Pharma Co. All therapeutic licensing and supply rights reserved.</p>
         <div className="footer-bottom-links">
-          <a href="#">Distribution Policy</a>
+          <a href="#">Pharma Supply Policy</a>
           <span>&middot;</span>
           <a href="#">Terms of Supply</a>
         </div>

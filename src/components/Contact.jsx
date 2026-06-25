@@ -33,7 +33,7 @@ export default function Contact({ inquiryList, setInquiryList }) {
     if (!formData.name || !formData.email || !formData.message) return;
     
     // Simulate API request to create ticket
-    const randomTicket = 'HB-DIST-' + Math.floor(100000 + Math.random() * 900000);
+    const randomTicket = 'HB-PHARMA-' + Math.floor(100000 + Math.random() * 900000);
     setTicketNum(randomTicket);
     setIsSubmitted(true);
   };
@@ -47,14 +47,14 @@ export default function Contact({ inquiryList, setInquiryList }) {
         <div className="section-header">
           <span className="tag">Partner Desk</span>
           <h2>Wholesale Inquiry Portal</h2>
-          <p>Register as a distribution partner or request a bulk quote. Our logistics desk responds within 12 business hours.</p>
+          <p>Register as a pharmaceutical partner or request a bulk quote. Our supply desk responds within 12 business hours.</p>
         </div>
 
         <div className="contact-grid">
           {/* Left Column: Direct Contact Info & Map Pulse */}
           <div className="contact-info-col">
             <div className="contact-info-card glass">
-              <h3>Central Logistics & Distribution Office</h3>
+              <h3>Central Corporate & Pharma Office</h3>
               <p className="card-desc">For contract negotiations, regulatory document filings, and licensing audits.</p>
               
               <div className="info-items">
@@ -63,7 +63,7 @@ export default function Contact({ inquiryList, setInquiryList }) {
                     <MapPin size={18} />
                   </div>
                   <div className="info-details">
-                    <span className="label">Distribution Headquarters</span>
+                    <span className="label">Corporate Headquarters</span>
                     <span className="value">Logistics Corridor, Building 4, Suite 100, Boston, MA</span>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ export default function Contact({ inquiryList, setInquiryList }) {
                   </div>
                   <div className="info-details">
                     <span className="label">Supply Desk</span>
-                    <span className="value">supply@heartbeatdistributors.com</span>
+                    <span className="value">supply@heartbeatpharma.com</span>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ export default function Contact({ inquiryList, setInquiryList }) {
                   <div className="pulse-locator-pin location-boston"></div>
                   <div className="pulse-locator-pin location-london"></div>
                   <div className="pulse-locator-pin location-tokyo"></div>
-                  <span className="locator-caption">Global Distribution Sync Active</span>
+                  <span className="locator-caption">Global Pharma Supply Sync Active</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Contact({ inquiryList, setInquiryList }) {
                   <CheckCircle2 size={48} className="text-secondary animate-pulse-glow" />
                 </div>
                 <h2>Inquiry Submitted Successfully</h2>
-                <p>Thank you, <strong>{formData.name}</strong>. Your wholesale request has been logged and queued for supply chain review.</p>
+                <p>Thank you, <strong>{formData.name}</strong>. Your wholesale request has been logged and queued for pharmaceutical licensing and supply review.</p>
                 
                 {inquiryList.length > 0 && (
                   <div className="success-rfq-items glass">
@@ -189,9 +189,9 @@ export default function Contact({ inquiryList, setInquiryList }) {
                     value={formData.subject} 
                     onChange={handleChange}
                   >
-                    <option value="partnership">Wholesale Licensing Partnership</option>
+                    <option value="partnership">Wholesale & Pharma Licensing Partnership</option>
                     <option value="quote">Bulk Procurement Quote Request (RFQ)</option>
-                    <option value="logistics">Cold-Chain Logistics & Delivery</option>
+                    <option value="logistics">Cold-Chain Therapeutics & Delivery</option>
                     <option value="general">General Corporate Inquiry</option>
                   </select>
                 </div>

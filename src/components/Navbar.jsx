@@ -22,27 +22,74 @@ export default function Navbar() {
       <div className="navbar-container container">
         <a href="#hero" className="navbar-logo">
           <div className="logo-icon-wrapper animate-heartbeat">
-            <svg viewBox="0 0 100 100" className="logo-svg" width="36" height="36">
-              {/* Path of Heart combined with heartbeat line */}
-              <path 
-                d="M12 35 C 12 15, 45 10, 50 35 C 55 10, 88 15, 88 35 C 88 60, 60 80, 50 88 C 40 80, 12 60, 12 35 Z" 
-                fill="none" 
-                stroke="#ef4444" 
-                strokeWidth="5"
-                strokeLinecap="round"
-              />
-              <path 
-                d="M20 50 L 38 50 L 44 32 L 50 68 L 56 42 L 62 50 L 80 50" 
-                fill="none" 
-                stroke="#3b82f6" 
-                strokeWidth="5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <svg viewBox="0 0 200 200" className="logo-svg" width="40" height="40">
+              <defs>
+                <linearGradient id="nav-logo-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#1d4ed8" />
+                </linearGradient>
+                <linearGradient id="nav-logo-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#10b981" />
+                  <stop offset="100%" stopColor="#84cc16" />
+                </linearGradient>
+                <linearGradient id="nav-logo-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#10b981" />
+                  <stop offset="100%" stopColor="#06b6d4" />
+                </linearGradient>
+                <linearGradient id="nav-logo-cross" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+                <linearGradient id="nav-logo-circle" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+                <path id="nav-text-path" d="M 32,82 A 72,72 0 0,1 168,82" fill="none" />
+              </defs>
+
+              {/* Outer Double Ring Arcs (Top) */}
+              <path d="M 25,75 A 80,80 0 0,1 175,75" fill="none" stroke="url(#nav-logo-circle)" strokeWidth="3" strokeLinecap="round" />
+              <path d="M 36,77 A 68,68 0 0,1 164,77" fill="none" stroke="url(#nav-logo-circle)" strokeWidth="1.5" strokeLinecap="round" />
+
+              {/* Outer Double Ring Arcs (Bottom) */}
+              <path d="M 25,125 A 80,80 0 0,0 155,135" fill="none" stroke="url(#nav-logo-circle)" strokeWidth="3" strokeLinecap="round" />
+              <path d="M 36,123 A 68,68 0 0,0 148,128" fill="none" stroke="url(#nav-logo-circle)" strokeWidth="1.5" strokeLinecap="round" />
+
+              {/* Curved Text */}
+              <text>
+                <textPath href="#nav-text-path" startOffset="50%" textAnchor="middle" fill="var(--text-primary)" fontSize="13" fontFamily="var(--font-heading)" fontWeight="800" letterSpacing="1.2">
+                  CARE IN EVERY BEAT
+                </textPath>
+              </text>
+
+              {/* ECG Wave on Left */}
+              <path d="M 5,115 L 23,115 L 28,103 L 32,115 L 35,118 L 39,80 L 43,145 L 48,105 L 53,115 L 65,115" 
+                    fill="none" stroke="url(#nav-logo-teal)" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+
+              {/* Medical Cross on Right */}
+              <path d="M 155,115 L 185,115 M 170,100 L 170,130" 
+                    fill="none" stroke="url(#nav-logo-cross)" strokeWidth="10" strokeLinecap="round" />
+
+              {/* Heart Left Side */}
+              <path d="M 100,160 C 65,138 48,110 48,90 C 48,70 65,58 82,75 C 91,84 100,95 100,102" 
+                    fill="none" stroke="url(#nav-logo-blue)" strokeWidth="12" strokeLinecap="round" />
+
+              {/* Heart Right Side (Green Leaf) */}
+              <path d="M 100,160 C 105,145 142,130 142,100 C 142,80 132,70 122,80 C 112,90 102,99 100,102 Z" 
+                    fill="url(#nav-logo-green)" />
+                    
+              {/* Leaf Center Vein */}
+              <path d="M 102,150 C 112,132 122,118 132,95" 
+                    fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" opacity="0.75" />
+
+              {/* Letters "HB" */}
+              <text x="94" y="125" fontFamily="var(--font-heading)" fontWeight="900" fontSize="36" fill="var(--text-primary)" textAnchor="middle" letterSpacing="-1.5">
+                HB
+              </text>
             </svg>
           </div>
           <span className="logo-text">
-            HEARTBEAT<span className="logo-subtext">DISTRIBUTION</span>
+            HEARTBEAT<span className="logo-subtext">PHARMA</span>
           </span>
         </a>
 

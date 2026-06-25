@@ -35,14 +35,14 @@ export default function About() {
   const pillars = [
     {
       icon: <Globe className="pillar-icon" />,
-      title: "Global Supply Network",
-      desc: "Operating temperature-controlled distribution networks across 50+ countries. We ensure rapid, temperature-sensitive delivery to pharmacies, hospitals, and clinics.",
+      title: "Global Therapeutics Network",
+      desc: "Operating temperature-controlled pharmaceutical supply lines across 50+ countries. We ensure rapid, temperature-sensitive delivery to pharmacies, hospitals, and clinics.",
       glowColor: "rgba(59, 130, 246, 0.4)"
     },
     {
       icon: <Award className="pillar-icon" />,
-      title: "GDP Standard Safety",
-      desc: "Strictly adhering to Good Distribution Practice (GDP) protocols. Every batch is tracked and checked to eliminate any counterfeit or compromised products.",
+      title: "GMP & GDP Quality Standards",
+      desc: "Strictly adhering to Good Manufacturing and Good Distribution Practice (GMP/GDP) protocols. Every batch is validated in our labs to eliminate counterfeit formulations.",
       glowColor: "rgba(239, 68, 68, 0.4)"
     },
     {
@@ -66,8 +66,8 @@ export default function About() {
       <div className="container">
         <div className="section-header">
           <span className="tag">Our Identity</span>
-          <h2>A Heritage of Pharmaceutical Supply</h2>
-          <p>We are a forward-looking pharmaceutical logistics company dedicated to bridging manufacturers with clinical points of care efficiently.</p>
+          <h2>A Heritage of Pharmaceutical Care</h2>
+          <p>We are a forward-looking pharmaceutical developer and supplier dedicated to bridging advanced research with clinical points of care.</p>
         </div>
 
         <div className="about-content">
@@ -99,15 +99,15 @@ export default function About() {
             <div className="narrative-text glass">
               <h3 className="text-gradient">Powering Healthcare Logistics</h3>
               <p>
-                Heartbeat Distributors was founded with a clear ambition: to build a more resilient, transparent, and secure pharmaceutical supply chain for global healthcare.
+                Heartbeat Pharma was founded with a clear ambition: to build a more resilient, transparent, and secure pharmaceutical supply chain for global healthcare.
               </p>
               <p>
-                We do not just ship medical cargo; we coordinate full logistics systems, verify temperature profiles, and validate product integrity. Our smart logistics centers operate around the clock, ensuring that critical cardiac, neurological, metabolic, and emergency care supplies reach retail and clinical hubs safely.
+                We do not just supply medical formulations; we pioneer clinical development, verify thermal integrity across the cold chain, and guarantee complete product safety. Our state-of-the-art laboratory and supply nodes operate around the clock, ensuring critical cardiac, metabolic, and oncology therapeutics reach patients safely.
               </p>
               
               <blockquote className="narrative-quote">
                 "A supply chain is only as strong as its weakest link. We ensure every link—from loading dock to patient—is perfect."
-                <cite>— Sarah Jenkins, VP of Global Logistics</cite>
+                <cite>— Sarah Jenkins, VP of Global Supply & Quality Assurance</cite>
               </blockquote>
             </div>
 
@@ -115,7 +115,7 @@ export default function About() {
             <div className="about-metrics">
               <div className="metric-box glass">
                 <span className="metric-num"><Counter endValue="18" suffix="+" /></span>
-                <span className="metric-name">Years in Logistics</span>
+                <span className="metric-name">Years in Pharma</span>
               </div>
               <div className="metric-box glass">
                 <span className="metric-num"><Counter endValue="1200" suffix="+" /></span>

@@ -171,9 +171,9 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
 
       <div className="container">
         <div className="section-header">
-          <span className="tag">B2B Distribution Catalog</span>
+          <span className="tag">B2B Therapeutics Catalog</span>
           <h2>Wholesale Pharmaceutical Catalog</h2>
-          <p>GDP-compliant wholesale pharmaceutical formulations and medical supplies available for retail pharmacies and healthcare providers.</p>
+          <p>GMP/GDP-compliant wholesale pharmaceutical formulations and medical supplies available for retail pharmacies and healthcare providers.</p>
         </div>
 
         {/* Categories Tab Selector */}
@@ -255,7 +255,7 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
                 </button>
                 <div className="details-header">
                   <span className="details-badge" style={{ backgroundColor: `${selectedProduct.color}15`, color: selectedProduct.color }}>
-                    DISTRIBUTION SPEC SHEET
+                    THERAPEUTICS SPEC SHEET
                   </span>
                   <h2>{selectedProduct.name}</h2>
                   <p className="details-target">{selectedProduct.target}</p>
@@ -336,7 +336,7 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
                   </div>
 
                   <div className="details-disclaimer">
-                    <span>* Direct supply available only for licensed retail pharmacies, clinics, and health institutions under active GDP credentials.</span>
+                    <span>* Direct supply available only for licensed retail pharmacies, clinics, and health institutions under active pharmaceutical licensing and GDP/GMP credentials.</span>
                   </div>
                 </div>
               </div>
@@ -344,7 +344,7 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
               <div className="empty-details-pane glass">
                 <Layers size={36} className="text-muted animate-float-slow" />
                 <h3>Select a Catalog Product</h3>
-                <p>Click any product on the left to inspect distribution specs, storage profiles, packaging sizes, and Minimum Order Quantities (MOQ).</p>
+                <p>Click any product on the left to inspect therapeutics specs, storage profiles, packaging sizes, and Minimum Order Quantities (MOQ).</p>
               </div>
             )}
           </div>

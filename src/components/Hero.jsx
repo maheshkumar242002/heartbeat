@@ -36,16 +36,16 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-tag">
             <Heart size={14} className="tag-icon text-primary animate-pulse-glow" />
-            <span>GDP-Certified Supply Chain Partner</span>
+            <span>GMP-Certified Pharmaceutical Partner</span>
           </div>
           
           <h1 className="hero-title">
             Caring <br />
-            <span className="text-gradient">Through Global Supply</span>
+            <span className="text-gradient">Through Clinical Innovation</span>
           </h1>
           
           <p className="hero-subtitle">
-            Heartbeat Distributors is a premier, high-integrity pharmaceutical distribution network. We bridge global manufacturers with local pharmacies, hospitals, and clinics, delivering temperature-controlled, authentic medicines on time.
+            Heartbeat Pharma is a premier, high-integrity pharmaceutical developer and B2B supply network. We bridge global laboratory research with localized patient care, delivering certified, authentic therapeutics on time.
           </p>
 
           <div className="hero-actions">
@@ -53,7 +53,7 @@ export default function Hero() {
               Explore B2B Catalog <ArrowRight size={18} />
             </a>
             <a href="#innovation" className="btn btn-secondary">
-              Logistics Network
+              Pharma Innovation
             </a>
           </div>
 
