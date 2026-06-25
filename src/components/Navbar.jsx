@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar-wrapper ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-container container">
         <a href="#hero" className="navbar-logo">
           <div className="logo-icon-wrapper animate-heartbeat">
@@ -256,20 +256,24 @@ export default function Navbar() {
 
         /* Mobile Menu */
         .mobile-menu-overlay {
-          position: fixed;
-          top: 0;
+          position: absolute;
+          top: 100%;
           left: 0;
           right: 0;
-          bottom: 0;
+          height: calc(100vh - 100%);
           background: rgba(7, 10, 19, 0.98);
           backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
           display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
+          padding: 3rem 1.5rem;
           opacity: 0;
           pointer-events: none;
           transition: all 0.4s ease;
           z-index: 100;
+          overflow-y: auto;
         }
 
         .mobile-menu-overlay.open {
@@ -283,7 +287,14 @@ export default function Navbar() {
           align-items: center;
           gap: 2.5rem;
           width: 100%;
-          padding: 2rem;
+          margin: auto 0;
+        }
+
+        .navbar-wrapper.menu-open {
+          background: rgba(7, 10, 19, 0.98) !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-bottom: 1px solid var(--border);
         }
 
         .mobile-nav-link {

@@ -473,6 +473,15 @@ export default function Hero() {
           .hero-title {
             font-size: 2.8rem;
           }
+          .hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+          }
+          .hero-actions .btn {
+            width: 100%;
+            justify-content: center;
+          }
           .hero-stats {
             flex-direction: column;
             gap: 1.5rem;

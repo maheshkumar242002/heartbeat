@@ -238,10 +238,18 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
           </div>
 
           {/* Details Column (Dynamic Preview Panel) */}
-          <div className="details-preview-col">
+          <div 
+            className={`details-preview-col ${selectedProduct ? 'open' : ''}`}
+            onClick={() => {
+              if (window.innerWidth <= 992) {
+                setSelectedProduct(null);
+              }
+            }}
+          >
             {selectedProduct ? (
               <div 
                 className="details-pane glass animate-fade-in"
+                onClick={(e) => e.stopPropagation()}
                 style={{
                   borderTop: `4px solid ${selectedProduct.color}`
                 }}
@@ -344,7 +352,7 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
               <div className="empty-details-pane glass">
                 <Layers size={36} className="text-muted animate-float-slow" />
                 <h3>Select a Catalog Product</h3>
-                <p>Click any product on the left to inspect therapeutics specs, storage profiles, packaging sizes, and Minimum Order Quantities (MOQ).</p>
+                <p>Click any product to inspect therapeutics specs, storage profiles, packaging sizes, and Minimum Order Quantities (MOQ).</p>
               </div>
             )}
           </div>
@@ -1121,23 +1129,70 @@ export default function Therapeutics({ inquiryList, setInquiryList }) {
             grid-template-columns: 1fr;
             gap: 3rem;
           }
+          
+          /* Slide-up bottom sheet details modal on tablet/mobile */
           .details-preview-col {
-            position: relative;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 200;
+            background: rgba(4, 7, 13, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+          }
+          
+          .details-preview-col.open {
+            opacity: 1;
+            pointer-events: auto;
+          }
+          
+          .details-pane {
+            width: 100%;
+            max-width: 600px;
+            max-height: 85vh;
+            border-radius: 24px 24px 0 0;
+            overflow-y: auto;
+            border-bottom: none;
+            padding: 2.5rem 2rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+          }
+          
+          .details-preview-col.open .details-pane {
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .categories-tab-bar {
+            flex-wrap: wrap;
+            border-radius: 16px;
+            gap: 0.5rem;
+            padding: 0.5rem;
+          }
+          .category-tab-btn {
+            flex: 1 1 calc(50% - 0.5rem);
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
           }
         }
 
         @media (max-width: 576px) {
-          .categories-tab-bar {
-            flex-wrap: wrap;
-            border-radius: 12px;
-          }
-          .category-tab-btn {
-            flex: 0 0 calc(50% - 0.5rem);
-            padding: 0.6rem 1rem;
-          }
           .details-pane {
             padding: 1.5rem;
+            max-height: 90vh;
           }
           .cart-drawer {
             padding: 1.5rem;
